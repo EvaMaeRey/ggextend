@@ -1,0 +1,81 @@
+#' A geom that draws a segment from the minimum x and y to maximum x and y
+#'
+#' @param ... all the geom_point arguments
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' # without the function
+#' library(magrittr)
+#' library(dplyr)
+#' cars %>%
+#'  summarize(
+#'    min_speed = min(speed),
+#'    max_speed = max(speed),
+#'    min_dist = min(dist),
+#'    max_dist = max(dist)
+#'  ) ->
+#'  mins_maxs
+#'
+#' library(ggplot2)
+#' ggplot(data = cars) +
+#'  aes(x = speed, y = dist) +
+#'  geom_point() +
+#'  geom_segment(data = mins_maxs,
+#'      aes(x = min_speed, xend = max_speed,
+#'          y = min_dist, yend = max_dist))
+#'
+#' # the proto
+#' StatSegmentminmax
+#'
+#' # the function
+#' d_geom_segment_mins_maxs
+#'
+#' # using the function
+#' ggplot(data = cars) +
+#'  aes(x = speed, y = dist) +
+#'  geom_point() +
+#'  d_geom_segment_mins_maxs()
+#'
+d_geom_segment_mins_maxs <- function(mapping = NULL,
+                                data = NULL,
+                                position = "identity",
+                                na.rm = FALSE,
+                                show.legend = NA,
+                                inherit.aes = TRUE, ...) {
+  ggplot2::layer(
+    stat = StatSegmentminmax,
+    geom = ggplot2::GeomSegment,
+    data = data,
+    mapping = mapping,
+    position = position,
+    show.legend = show.legend,
+    inherit.aes = inherit.aes,
+    params = list(na.rm = na.rm, ...)
+  )
+}
+
+StatSegmentminmax <- ggplot2::ggproto(
+  "StatSegmentminmax",
+  ggplot2::Stat,
+
+  compute_group = function(data, scales) {
+
+
+    dat <- data.frame()
+    dat$x = min(data$x)
+    dat$y = min(data$y)
+    dat$xend = max(data$x)
+    dat$yend = max(data$y)
+      # summarize(
+      #   x = min(x),
+      #   y = min(y),
+      #   xend = max(x),
+      #   yend = max(y)
+      # )
+
+  },
+
+  required_aes = c("x", "y")
+)
