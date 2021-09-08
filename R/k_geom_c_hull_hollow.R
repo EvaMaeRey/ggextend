@@ -31,17 +31,23 @@
 #'   aes(x = speed) +
 #'   aes(y = dist) +
 #'   geom_point() +
-#'   j_geom_c_hull(alpha = .5) +
+#'   k_geom_c_hull_hollow(alpha = .5) +
 #'   aes(color = speed >= 10)
-j_geom_c_hull <- function(mapping = NULL, data = NULL,
+k_geom_c_hull_hollow <- function(mapping = NULL, data = NULL,
                                           position = "identity", na.rm = FALSE, show.legend = NA,
                                           inherit.aes = TRUE, ...) {
   ggplot2::layer(
-    stat = StatChull, geom = ggplot2::GeomPolygon, data = data, mapping = mapping,
+    stat = StatChull, geom = GeomPolygonHollow, data = data, mapping = mapping,
     position = position, show.legend = show.legend, inherit.aes = inherit.aes,
     params = list(na.rm = na.rm, ...)
   )
 }
+
+GeomPolygonHollow <- ggplot2::ggproto("GeomPolygonHollow",
+                              ggplot2::GeomPolygon,
+                              default_aes = ggplot2::aes(alpha = NA, fill = NA, linetype = 1, lwd = 1)
+)
+
 
 
 StatChull <- ggplot2::ggproto("StatChull",

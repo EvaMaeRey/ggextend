@@ -47,18 +47,33 @@ ggplot(data = my_cars) +
            hjust = 0, nudge_x = .2)
 layer_data(last_plot(), 2)
 
-# the proto
-StatLineendlabel
-
-# the function
+# the proto and function
+StatLineendlabel$compute_group
+StatLineendlabel$required_aes
+# the proto and function
+StatLineendlabel$compute_group
+StatLineendlabel$required_aes
 g_geom_line_label
+
 
 # using the function
 ggplot(data = my_cars) +
- aes(x = speed, y = dist) +
+ aes(x = speed, y = dist, label = speed > 9) +
  geom_line() +
- g_geom_line_label() +
- aes(label = speed_cat)
+ g_geom_line_label(size = 4, color = "black") +
+ aes(color = speed > 9) +
+ aes(group = speed > 9)
+ layer_data(last_plot(), 2)
+
+ ggplot(data = my_cars) +
+ aes(x = speed, y = dist,
+     label = speed_cat \%>\% factor()) +
+ geom_line() +
+ g_geom_line_label(size = 4, color = "black",
+                   hjust = 0) +
+ aes(group = speed_cat) +
+ aes(color = speed_cat)
+ theme(legend.position = "none")
  layer_data(last_plot(), 2)
 
 }

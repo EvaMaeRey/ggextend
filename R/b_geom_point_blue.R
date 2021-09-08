@@ -14,6 +14,7 @@
 #'
 #' # the function
 #' b_geom_point_blue
+#' b_geom_point_blue
 #'
 #' # using the function
 #' ggplot(data = cars) +

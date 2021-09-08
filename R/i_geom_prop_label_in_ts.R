@@ -45,13 +45,13 @@
 #'   aes(fill = 1, label = 1) + # use 1 to count times continent is observed
 #'   geom_tile_prop_over_time(color = "oldlace") +
 #'   labs(fill = "proportion\nof countries\nin each time\nperiod") +
-#'   geom_tile_prop_over_time_text(size = 3) +
+#'   i_geom_tile_prop_over_time_text(size = 3) +
 #'   facet_wrap(facets = vars(ifelse(gdpPercap > 10000,
 #'   "gdp per cap > 10000", "gdp per cap < 10000")),
 #'   ncol = 1) +
 #'   scale_fill_viridis_c()
 #'
-geom_tile_prop_over_time_text <- function(mapping = NULL, data = NULL,
+i_geom_tile_prop_over_time_text <- function(mapping = NULL, data = NULL,
                                           position = "identity", na.rm = FALSE, show.legend = NA,
                                           inherit.aes = TRUE, ...) {
   ggplot2::layer(

@@ -43,11 +43,10 @@ ggplot(data = cars) +
  geom_segment(data = mins_maxs,
      aes(x = min_speed, xend = max_speed,
          y = min_dist, yend = max_dist))
+ layer_data(last_plot(), i = 2)
 
 # the proto
-StatSegmentminmax
-
-# the function
+"StatSegmentminmax"
 d_geom_segment_mins_maxs
 
 # using the function
@@ -55,5 +54,6 @@ ggplot(data = cars) +
  aes(x = speed, y = dist) +
  geom_point() +
  d_geom_segment_mins_maxs()
+ layer_data(last_plot(), i = 2)
 
 }

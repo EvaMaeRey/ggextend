@@ -14,11 +14,12 @@
 #'
 #' # the function
 #' a_geom_punto
+#' a_geom_punto
 #'
 #' # using the function
 #' ggplot(data = cars) +
 #'  aes(x = speed, y = dist) +
-#'  a_geom_point()
+#'  a_geom_punto()
 #'
 a_geom_punto <- function(...){
 

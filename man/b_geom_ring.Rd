@@ -25,6 +25,7 @@ ggplot(data = cars) +
 
 # the function
 b_geom_ring
+b_geom_ring
 
 # using the function
 ggplot(data = cars) +

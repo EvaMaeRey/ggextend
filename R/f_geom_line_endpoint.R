@@ -24,7 +24,8 @@
 #' layer_data(last_plot(), 2)
 #'
 #' # the proto
-#' StatEndpoint
+#' "StatEndpoint"
+#' f_geom_line_endpoint
 #'
 #' # the function
 #' f_geom_line_endpoint

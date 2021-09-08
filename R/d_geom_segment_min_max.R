@@ -25,11 +25,10 @@
 #'  geom_segment(data = mins_maxs,
 #'      aes(x = min_speed, xend = max_speed,
 #'          y = min_dist, yend = max_dist))
+#'  layer_data(last_plot(), i = 2)
 #'
 #' # the proto
-#' StatSegmentminmax
-#'
-#' # the function
+#' "StatSegmentminmax"
 #' d_geom_segment_mins_maxs
 #'
 #' # using the function
@@ -37,13 +36,15 @@
 #'  aes(x = speed, y = dist) +
 #'  geom_point() +
 #'  d_geom_segment_mins_maxs()
+#'  layer_data(last_plot(), i = 2)
 #'
 d_geom_segment_mins_maxs <- function(mapping = NULL,
-                                data = NULL,
-                                position = "identity",
-                                na.rm = FALSE,
-                                show.legend = NA,
-                                inherit.aes = TRUE, ...) {
+                              data = NULL,
+                              position = "identity",
+                              na.rm = FALSE,
+                              show.legend = NA,
+                              inherit.aes = TRUE,
+                              ...) {
   ggplot2::layer(
     stat = StatSegmentminmax,
     geom = ggplot2::GeomSegment,
@@ -62,18 +63,12 @@ StatSegmentminmax <- ggplot2::ggproto(
 
   compute_group = function(data, scales) {
 
+    new_data <- data.frame(x = min(data$x))
+    new_data$y = min(data$y)
+    new_data$xend = max(data$x)
+    new_data$yend = max(data$y)
 
-    dat <- data.frame()
-    dat$x = min(data$x)
-    dat$y = min(data$y)
-    dat$xend = max(data$x)
-    dat$yend = max(data$y)
-      # summarize(
-      #   x = min(x),
-      #   y = min(y),
-      #   xend = max(x),
-      #   yend = max(y)
-      # )
+    new_data
 
   },
 

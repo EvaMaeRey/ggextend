@@ -46,10 +46,8 @@ ggplot(data = cars) +
          color = "red",
          size = 3)
 
-# the proto
-StatMinsMaxs
-
-# the function
+# the proto and function
+"StatOlsintercept"
 e_geom_lm_intercept
 
 # using the function
