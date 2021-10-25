@@ -51,8 +51,7 @@ layer_data(last_plot(), 2)
 StatLineendlabel$compute_group
 StatLineendlabel$required_aes
 # the proto and function
-StatLineendlabel$compute_group
-StatLineendlabel$required_aes
+StatLineendlabel
 g_geom_line_label
 
 

@@ -1,0 +1,3936 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>ggextend</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Exploded Examples" />
+    <script src="libs/header-attrs-2.6/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/hygge.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/ninjutsu.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# ggextend
+### Exploded Examples
+
+---
+
+
+
+```
+## Warning: package 'ggplot2' was built under R version 3.6.2
+```
+
+```
+## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──
+```
+
+```
+## ✓ tibble  3.1.2     ✓ dplyr   1.0.7
+## ✓ tidyr   1.0.2     ✓ stringr 1.4.0
+## ✓ readr   1.3.1     ✓ forcats 0.5.0
+## ✓ purrr   0.3.4
+```
+
+```
+## Warning: package 'tibble' was built under R version 3.6.2
+```
+
+```
+## Warning: package 'purrr' was built under R version 3.6.2
+```
+
+```
+## Warning: package 'dplyr' was built under R version 3.6.2
+```
+
+```
+## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+```
+
+
+---
+
+count: false
+ 
+### a_geom_punto
+.panel1-a_geom_punto_1-auto[
+
+```r
+# the function
+*a_geom_punto
+```
+]
+ 
+.panel2-a_geom_punto_1-auto[
+
+```
+function(...){
+
+  ggplot2::geom_point(...)
+
+}
+&lt;bytecode: 0x7f94a3d04358&gt;
+&lt;environment: namespace:ggextend&gt;
+```
+]
+
+---
+count: false
+ 
+### a_geom_punto
+.panel1-a_geom_punto_1-auto[
+
+```r
+# the function
+a_geom_punto
+*a_geom_punto
+```
+]
+ 
+.panel2-a_geom_punto_1-auto[
+
+```
+function(...){
+
+  ggplot2::geom_point(...)
+
+}
+&lt;bytecode: 0x7f94a3d04358&gt;
+&lt;environment: namespace:ggextend&gt;
+```
+
+```
+function(...){
+
+  ggplot2::geom_point(...)
+
+}
+&lt;bytecode: 0x7f94a3d04358&gt;
+&lt;environment: namespace:ggextend&gt;
+```
+]
+
+&lt;style&gt;
+.panel1-a_geom_punto_1-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-a_geom_punto_1-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-a_geom_punto_1-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+---
+
+count: false
+ 
+### a_geom_punto
+.panel1-a_geom_punto_2-auto[
+
+```r
+# using the function
+*ggplot(data = cars)
+```
+]
+ 
+.panel2-a_geom_punto_2-auto[
+![](exploded_examples_files/figure-html/a_geom_punto_2_auto_01_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### a_geom_punto
+.panel1-a_geom_punto_2-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+*aes(x = speed, y = dist)
+```
+]
+ 
+.panel2-a_geom_punto_2-auto[
+![](exploded_examples_files/figure-html/a_geom_punto_2_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### a_geom_punto
+.panel1-a_geom_punto_2-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+*a_geom_punto()
+```
+]
+ 
+.panel2-a_geom_punto_2-auto[
+![](exploded_examples_files/figure-html/a_geom_punto_2_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-a_geom_punto_2-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-a_geom_punto_2-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-a_geom_punto_2-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+---
+
+count: false
+ 
+### a_geom_punto
+.panel1-a_geom_punto_3-auto[
+
+```r
+# without the function
+*library(ggplot2)
+```
+]
+ 
+.panel2-a_geom_punto_3-auto[
+
+]
+
+---
+count: false
+ 
+### a_geom_punto
+.panel1-a_geom_punto_3-auto[
+
+```r
+# without the function
+library(ggplot2)
+*ggplot(data = cars)
+```
+]
+ 
+.panel2-a_geom_punto_3-auto[
+![](exploded_examples_files/figure-html/a_geom_punto_3_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### a_geom_punto
+.panel1-a_geom_punto_3-auto[
+
+```r
+# without the function
+library(ggplot2)
+ggplot(data = cars) +
+*aes(x = speed, y = dist)
+```
+]
+ 
+.panel2-a_geom_punto_3-auto[
+![](exploded_examples_files/figure-html/a_geom_punto_3_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### a_geom_punto
+.panel1-a_geom_punto_3-auto[
+
+```r
+# without the function
+library(ggplot2)
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+*geom_point()
+```
+]
+ 
+.panel2-a_geom_punto_3-auto[
+![](exploded_examples_files/figure-html/a_geom_punto_3_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-a_geom_punto_3-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-a_geom_punto_3-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-a_geom_punto_3-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+---
+
+count: false
+ 
+### b_geom_point_blue
+.panel1-b_geom_point_blue_4-auto[
+
+```r
+# the function
+*b_geom_point_blue
+```
+]
+ 
+.panel2-b_geom_point_blue_4-auto[
+
+```
+function(...){
+
+  ggplot2::geom_point(color = "blue", ...)
+
+}
+&lt;bytecode: 0x7f9df753b8a8&gt;
+&lt;environment: namespace:ggextend&gt;
+```
+]
+
+---
+count: false
+ 
+### b_geom_point_blue
+.panel1-b_geom_point_blue_4-auto[
+
+```r
+# the function
+b_geom_point_blue
+*b_geom_point_blue
+```
+]
+ 
+.panel2-b_geom_point_blue_4-auto[
+
+```
+function(...){
+
+  ggplot2::geom_point(color = "blue", ...)
+
+}
+&lt;bytecode: 0x7f9df753b8a8&gt;
+&lt;environment: namespace:ggextend&gt;
+```
+
+```
+function(...){
+
+  ggplot2::geom_point(color = "blue", ...)
+
+}
+&lt;bytecode: 0x7f9df753b8a8&gt;
+&lt;environment: namespace:ggextend&gt;
+```
+]
+
+&lt;style&gt;
+.panel1-b_geom_point_blue_4-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-b_geom_point_blue_4-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-b_geom_point_blue_4-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+---
+
+count: false
+ 
+### b_geom_point_blue
+.panel1-b_geom_point_blue_5-auto[
+
+```r
+# using the function
+*ggplot(data = cars)
+```
+]
+ 
+.panel2-b_geom_point_blue_5-auto[
+![](exploded_examples_files/figure-html/b_geom_point_blue_5_auto_01_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### b_geom_point_blue
+.panel1-b_geom_point_blue_5-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+*aes(x = speed, y = dist)
+```
+]
+ 
+.panel2-b_geom_point_blue_5-auto[
+![](exploded_examples_files/figure-html/b_geom_point_blue_5_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### b_geom_point_blue
+.panel1-b_geom_point_blue_5-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+*b_geom_point_blue()
+```
+]
+ 
+.panel2-b_geom_point_blue_5-auto[
+![](exploded_examples_files/figure-html/b_geom_point_blue_5_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-b_geom_point_blue_5-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-b_geom_point_blue_5-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-b_geom_point_blue_5-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+---
+
+count: false
+ 
+### b_geom_point_blue
+.panel1-b_geom_point_blue_6-auto[
+
+```r
+# without the function
+*library(ggplot2)
+```
+]
+ 
+.panel2-b_geom_point_blue_6-auto[
+
+]
+
+---
+count: false
+ 
+### b_geom_point_blue
+.panel1-b_geom_point_blue_6-auto[
+
+```r
+# without the function
+library(ggplot2)
+*ggplot(data = cars)
+```
+]
+ 
+.panel2-b_geom_point_blue_6-auto[
+![](exploded_examples_files/figure-html/b_geom_point_blue_6_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### b_geom_point_blue
+.panel1-b_geom_point_blue_6-auto[
+
+```r
+# without the function
+library(ggplot2)
+ggplot(data = cars) +
+*aes(x = speed, y = dist)
+```
+]
+ 
+.panel2-b_geom_point_blue_6-auto[
+![](exploded_examples_files/figure-html/b_geom_point_blue_6_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### b_geom_point_blue
+.panel1-b_geom_point_blue_6-auto[
+
+```r
+# without the function
+library(ggplot2)
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+*geom_point(color = "blue")
+```
+]
+ 
+.panel2-b_geom_point_blue_6-auto[
+![](exploded_examples_files/figure-html/b_geom_point_blue_6_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-b_geom_point_blue_6-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-b_geom_point_blue_6-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-b_geom_point_blue_6-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+---
+
+count: false
+ 
+### b_geom_ring
+.panel1-b_geom_ring_7-auto[
+
+```r
+# the function
+*b_geom_ring
+```
+]
+ 
+.panel2-b_geom_ring_7-auto[
+
+```
+function(...){
+
+  ggplot2::geom_point(shape = 21, ...)
+
+}
+&lt;bytecode: 0x7f9df83f6390&gt;
+&lt;environment: namespace:ggextend&gt;
+```
+]
+
+---
+count: false
+ 
+### b_geom_ring
+.panel1-b_geom_ring_7-auto[
+
+```r
+# the function
+b_geom_ring
+*b_geom_ring
+```
+]
+ 
+.panel2-b_geom_ring_7-auto[
+
+```
+function(...){
+
+  ggplot2::geom_point(shape = 21, ...)
+
+}
+&lt;bytecode: 0x7f9df83f6390&gt;
+&lt;environment: namespace:ggextend&gt;
+```
+
+```
+function(...){
+
+  ggplot2::geom_point(shape = 21, ...)
+
+}
+&lt;bytecode: 0x7f9df83f6390&gt;
+&lt;environment: namespace:ggextend&gt;
+```
+]
+
+&lt;style&gt;
+.panel1-b_geom_ring_7-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-b_geom_ring_7-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-b_geom_ring_7-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+---
+
+count: false
+ 
+### b_geom_ring
+.panel1-b_geom_ring_8-auto[
+
+```r
+# using the function
+*ggplot(data = cars)
+```
+]
+ 
+.panel2-b_geom_ring_8-auto[
+![](exploded_examples_files/figure-html/b_geom_ring_8_auto_01_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### b_geom_ring
+.panel1-b_geom_ring_8-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+*aes(x = speed, y = dist)
+```
+]
+ 
+.panel2-b_geom_ring_8-auto[
+![](exploded_examples_files/figure-html/b_geom_ring_8_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### b_geom_ring
+.panel1-b_geom_ring_8-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+*b_geom_ring(size = 3)
+```
+]
+ 
+.panel2-b_geom_ring_8-auto[
+![](exploded_examples_files/figure-html/b_geom_ring_8_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### b_geom_ring
+.panel1-b_geom_ring_8-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ b_geom_ring(size = 3) +
+*b_geom_ring(aes(fill = speed &gt; 9),
+*            color = "white",
+*            size = 8)
+```
+]
+ 
+.panel2-b_geom_ring_8-auto[
+![](exploded_examples_files/figure-html/b_geom_ring_8_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### b_geom_ring
+.panel1-b_geom_ring_8-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ b_geom_ring(size = 3) +
+ b_geom_ring(aes(fill = speed &gt; 9),
+             color = "white",
+             size = 8)
+# using the function
+*ggplot(data = cars)
+```
+]
+ 
+.panel2-b_geom_ring_8-auto[
+![](exploded_examples_files/figure-html/b_geom_ring_8_auto_05_output-1.png)&lt;!-- --&gt;![](exploded_examples_files/figure-html/b_geom_ring_8_auto_05_output-2.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### b_geom_ring
+.panel1-b_geom_ring_8-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ b_geom_ring(size = 3) +
+ b_geom_ring(aes(fill = speed &gt; 9),
+             color = "white",
+             size = 8)
+# using the function
+ggplot(data = cars) +
+*aes(x = speed, y = dist)
+```
+]
+ 
+.panel2-b_geom_ring_8-auto[
+![](exploded_examples_files/figure-html/b_geom_ring_8_auto_06_output-1.png)&lt;!-- --&gt;![](exploded_examples_files/figure-html/b_geom_ring_8_auto_06_output-2.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### b_geom_ring
+.panel1-b_geom_ring_8-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ b_geom_ring(size = 3) +
+ b_geom_ring(aes(fill = speed &gt; 9),
+             color = "white",
+             size = 8)
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+*b_geom_ring(fill = "slateblue",
+*            color = "white",
+*            size = 8)
+```
+]
+ 
+.panel2-b_geom_ring_8-auto[
+![](exploded_examples_files/figure-html/b_geom_ring_8_auto_07_output-1.png)&lt;!-- --&gt;![](exploded_examples_files/figure-html/b_geom_ring_8_auto_07_output-2.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-b_geom_ring_8-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-b_geom_ring_8-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-b_geom_ring_8-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+---
+
+count: false
+ 
+### b_geom_ring
+.panel1-b_geom_ring_9-auto[
+
+```r
+# without the function
+*library(ggplot2)
+```
+]
+ 
+.panel2-b_geom_ring_9-auto[
+
+]
+
+---
+count: false
+ 
+### b_geom_ring
+.panel1-b_geom_ring_9-auto[
+
+```r
+# without the function
+library(ggplot2)
+*ggplot(data = cars)
+```
+]
+ 
+.panel2-b_geom_ring_9-auto[
+![](exploded_examples_files/figure-html/b_geom_ring_9_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### b_geom_ring
+.panel1-b_geom_ring_9-auto[
+
+```r
+# without the function
+library(ggplot2)
+ggplot(data = cars) +
+*aes(x = speed, y = dist)
+```
+]
+ 
+.panel2-b_geom_ring_9-auto[
+![](exploded_examples_files/figure-html/b_geom_ring_9_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### b_geom_ring
+.panel1-b_geom_ring_9-auto[
+
+```r
+# without the function
+library(ggplot2)
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+*geom_point(shape = 21,
+*           size = 3)
+```
+]
+ 
+.panel2-b_geom_ring_9-auto[
+![](exploded_examples_files/figure-html/b_geom_ring_9_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-b_geom_ring_9-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-b_geom_ring_9-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-b_geom_ring_9-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+---
+
+count: false
+ 
+### c_geom_lm
+.panel1-c_geom_lm_10-auto[
+
+```r
+# the function
+*c_geom_lm
+```
+]
+ 
+.panel2-c_geom_lm_10-auto[
+
+```
+function(...){
+
+  ggplot2::geom_smooth(method = lm, se = FALSE, ...)
+
+}
+&lt;bytecode: 0x7f9df97d0470&gt;
+&lt;environment: namespace:ggextend&gt;
+```
+]
+
+&lt;style&gt;
+.panel1-c_geom_lm_10-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-c_geom_lm_10-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-c_geom_lm_10-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+---
+
+count: false
+ 
+### c_geom_lm
+.panel1-c_geom_lm_11-auto[
+
+```r
+# using the function
+*ggplot(data = cars)
+```
+]
+ 
+.panel2-c_geom_lm_11-auto[
+![](exploded_examples_files/figure-html/c_geom_lm_11_auto_01_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### c_geom_lm
+.panel1-c_geom_lm_11-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+*aes(x = speed, y = dist)
+```
+]
+ 
+.panel2-c_geom_lm_11-auto[
+![](exploded_examples_files/figure-html/c_geom_lm_11_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### c_geom_lm
+.panel1-c_geom_lm_11-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+*geom_point()
+```
+]
+ 
+.panel2-c_geom_lm_11-auto[
+![](exploded_examples_files/figure-html/c_geom_lm_11_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### c_geom_lm
+.panel1-c_geom_lm_11-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ geom_point() +
+*c_geom_lm()
+```
+]
+ 
+.panel2-c_geom_lm_11-auto[
+![](exploded_examples_files/figure-html/c_geom_lm_11_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-c_geom_lm_11-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-c_geom_lm_11-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-c_geom_lm_11-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+---
+
+count: false
+ 
+### c_geom_lm
+.panel1-c_geom_lm_12-auto[
+
+```r
+# without the function
+*library(ggplot2)
+```
+]
+ 
+.panel2-c_geom_lm_12-auto[
+
+]
+
+---
+count: false
+ 
+### c_geom_lm
+.panel1-c_geom_lm_12-auto[
+
+```r
+# without the function
+library(ggplot2)
+*ggplot(data = cars)
+```
+]
+ 
+.panel2-c_geom_lm_12-auto[
+![](exploded_examples_files/figure-html/c_geom_lm_12_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### c_geom_lm
+.panel1-c_geom_lm_12-auto[
+
+```r
+# without the function
+library(ggplot2)
+ggplot(data = cars) +
+*aes(x = speed, y = dist)
+```
+]
+ 
+.panel2-c_geom_lm_12-auto[
+![](exploded_examples_files/figure-html/c_geom_lm_12_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### c_geom_lm
+.panel1-c_geom_lm_12-auto[
+
+```r
+# without the function
+library(ggplot2)
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+*geom_point()
+```
+]
+ 
+.panel2-c_geom_lm_12-auto[
+![](exploded_examples_files/figure-html/c_geom_lm_12_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### c_geom_lm
+.panel1-c_geom_lm_12-auto[
+
+```r
+# without the function
+library(ggplot2)
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ geom_point() +
+*geom_smooth(method = lm, se = FALSE)
+```
+]
+ 
+.panel2-c_geom_lm_12-auto[
+![](exploded_examples_files/figure-html/c_geom_lm_12_auto_05_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-c_geom_lm_12-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-c_geom_lm_12-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-c_geom_lm_12-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+---
+
+count: false
+ 
+### d_geom_segment_min_max
+.panel1-d_geom_segment_min_max_13-auto[
+
+```r
+# the proto
+*"StatSegmentminmax"
+```
+]
+ 
+.panel2-d_geom_segment_min_max_13-auto[
+
+```
+[1] "StatSegmentminmax"
+```
+]
+
+---
+count: false
+ 
+### d_geom_segment_min_max
+.panel1-d_geom_segment_min_max_13-auto[
+
+```r
+# the proto
+"StatSegmentminmax"
+*d_geom_segment_mins_maxs
+```
+]
+ 
+.panel2-d_geom_segment_min_max_13-auto[
+
+```
+[1] "StatSegmentminmax"
+```
+
+```
+function(mapping = NULL,
+                                data = NULL,
+                                position = "identity",
+                                na.rm = FALSE,
+                                show.legend = NA,
+                                inherit.aes = TRUE, ...) {
+  ggplot2::layer(
+    stat = StatSegmentminmax,
+    geom = ggplot2::GeomSegment,
+    data = data,
+    mapping = mapping,
+    position = position,
+    show.legend = show.legend,
+    inherit.aes = inherit.aes,
+    params = list(na.rm = na.rm, ...)
+  )
+}
+&lt;bytecode: 0x7f9e01dc2a40&gt;
+&lt;environment: namespace:ggextend&gt;
+```
+]
+
+&lt;style&gt;
+.panel1-d_geom_segment_min_max_13-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-d_geom_segment_min_max_13-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-d_geom_segment_min_max_13-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+---
+
+count: false
+ 
+### d_geom_segment_min_max
+.panel1-d_geom_segment_min_max_14-auto[
+
+```r
+# using the function
+*ggplot(data = cars)
+```
+]
+ 
+.panel2-d_geom_segment_min_max_14-auto[
+![](exploded_examples_files/figure-html/d_geom_segment_min_max_14_auto_01_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### d_geom_segment_min_max
+.panel1-d_geom_segment_min_max_14-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+*aes(x = speed, y = dist)
+```
+]
+ 
+.panel2-d_geom_segment_min_max_14-auto[
+![](exploded_examples_files/figure-html/d_geom_segment_min_max_14_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### d_geom_segment_min_max
+.panel1-d_geom_segment_min_max_14-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+*geom_point()
+```
+]
+ 
+.panel2-d_geom_segment_min_max_14-auto[
+![](exploded_examples_files/figure-html/d_geom_segment_min_max_14_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### d_geom_segment_min_max
+.panel1-d_geom_segment_min_max_14-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ geom_point() +
+*d_geom_segment_mins_maxs()
+```
+]
+ 
+.panel2-d_geom_segment_min_max_14-auto[
+![](exploded_examples_files/figure-html/d_geom_segment_min_max_14_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-d_geom_segment_min_max_14-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-d_geom_segment_min_max_14-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-d_geom_segment_min_max_14-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+---
+
+count: false
+ 
+### d_geom_segment_min_max
+.panel1-d_geom_segment_min_max_15-auto[
+
+```r
+# without the function
+*library(magrittr)
+```
+]
+ 
+.panel2-d_geom_segment_min_max_15-auto[
+
+]
+
+---
+count: false
+ 
+### d_geom_segment_min_max
+.panel1-d_geom_segment_min_max_15-auto[
+
+```r
+# without the function
+library(magrittr)
+*library(dplyr)
+```
+]
+ 
+.panel2-d_geom_segment_min_max_15-auto[
+
+]
+
+---
+count: false
+ 
+### d_geom_segment_min_max
+.panel1-d_geom_segment_min_max_15-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+*cars
+```
+]
+ 
+.panel2-d_geom_segment_min_max_15-auto[
+
+```
+   speed dist
+1      4    2
+2      4   10
+3      7    4
+4      7   22
+5      8   16
+6      9   10
+7     10   18
+8     10   26
+9     10   34
+10    11   17
+11    11   28
+12    12   14
+13    12   20
+14    12   24
+15    12   28
+16    13   26
+17    13   34
+18    13   34
+19    13   46
+20    14   26
+21    14   36
+22    14   60
+23    14   80
+24    15   20
+25    15   26
+26    15   54
+27    16   32
+28    16   40
+29    17   32
+30    17   40
+31    17   50
+32    18   42
+33    18   56
+34    18   76
+35    18   84
+36    19   36
+37    19   46
+38    19   68
+39    20   32
+40    20   48
+41    20   52
+42    20   56
+43    20   64
+44    22   66
+45    23   54
+46    24   70
+47    24   92
+48    24   93
+49    24  120
+50    25   85
+```
+]
+
+---
+count: false
+ 
+### d_geom_segment_min_max
+.panel1-d_geom_segment_min_max_15-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+*summarize(
+*  min_speed = min(speed),
+*  max_speed = max(speed),
+*  min_dist = min(dist),
+*  max_dist = max(dist)
+* )
+```
+]
+ 
+.panel2-d_geom_segment_min_max_15-auto[
+
+```
+  min_speed max_speed min_dist max_dist
+1         4        25        2      120
+```
+]
+
+---
+count: false
+ 
+### d_geom_segment_min_max
+.panel1-d_geom_segment_min_max_15-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+ summarize(
+   min_speed = min(speed),
+   max_speed = max(speed),
+   min_dist = min(dist),
+   max_dist = max(dist)
+ ) -&gt;
+*mins_maxs
+```
+]
+ 
+.panel2-d_geom_segment_min_max_15-auto[
+
+]
+
+---
+count: false
+ 
+### d_geom_segment_min_max
+.panel1-d_geom_segment_min_max_15-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+ summarize(
+   min_speed = min(speed),
+   max_speed = max(speed),
+   min_dist = min(dist),
+   max_dist = max(dist)
+ ) -&gt;
+ mins_maxs
+*library(ggplot2)
+```
+]
+ 
+.panel2-d_geom_segment_min_max_15-auto[
+
+]
+
+---
+count: false
+ 
+### d_geom_segment_min_max
+.panel1-d_geom_segment_min_max_15-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+ summarize(
+   min_speed = min(speed),
+   max_speed = max(speed),
+   min_dist = min(dist),
+   max_dist = max(dist)
+ ) -&gt;
+ mins_maxs
+library(ggplot2)
+*ggplot(data = cars)
+```
+]
+ 
+.panel2-d_geom_segment_min_max_15-auto[
+![](exploded_examples_files/figure-html/d_geom_segment_min_max_15_auto_07_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### d_geom_segment_min_max
+.panel1-d_geom_segment_min_max_15-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+ summarize(
+   min_speed = min(speed),
+   max_speed = max(speed),
+   min_dist = min(dist),
+   max_dist = max(dist)
+ ) -&gt;
+ mins_maxs
+library(ggplot2)
+ggplot(data = cars) +
+*aes(x = speed, y = dist)
+```
+]
+ 
+.panel2-d_geom_segment_min_max_15-auto[
+![](exploded_examples_files/figure-html/d_geom_segment_min_max_15_auto_08_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### d_geom_segment_min_max
+.panel1-d_geom_segment_min_max_15-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+ summarize(
+   min_speed = min(speed),
+   max_speed = max(speed),
+   min_dist = min(dist),
+   max_dist = max(dist)
+ ) -&gt;
+ mins_maxs
+library(ggplot2)
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+*geom_point()
+```
+]
+ 
+.panel2-d_geom_segment_min_max_15-auto[
+![](exploded_examples_files/figure-html/d_geom_segment_min_max_15_auto_09_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### d_geom_segment_min_max
+.panel1-d_geom_segment_min_max_15-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+ summarize(
+   min_speed = min(speed),
+   max_speed = max(speed),
+   min_dist = min(dist),
+   max_dist = max(dist)
+ ) -&gt;
+ mins_maxs
+library(ggplot2)
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ geom_point() +
+*geom_segment(data = mins_maxs,
+*    aes(x = min_speed, xend = max_speed,
+*        y = min_dist, yend = max_dist))
+```
+]
+ 
+.panel2-d_geom_segment_min_max_15-auto[
+![](exploded_examples_files/figure-html/d_geom_segment_min_max_15_auto_10_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-d_geom_segment_min_max_15-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-d_geom_segment_min_max_15-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-d_geom_segment_min_max_15-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+---
+
+count: false
+ 
+### e_geom_lm_intercept
+.panel1-e_geom_lm_intercept_16-auto[
+
+```r
+# the proto and function
+*"StatOlsintercept"
+```
+]
+ 
+.panel2-e_geom_lm_intercept_16-auto[
+
+```
+[1] "StatOlsintercept"
+```
+]
+
+---
+count: false
+ 
+### e_geom_lm_intercept
+.panel1-e_geom_lm_intercept_16-auto[
+
+```r
+# the proto and function
+"StatOlsintercept"
+*e_geom_lm_intercept
+```
+]
+ 
+.panel2-e_geom_lm_intercept_16-auto[
+
+```
+[1] "StatOlsintercept"
+```
+
+```
+function(mapping = NULL,
+                              data = NULL,
+                              position = "identity",
+                              na.rm = FALSE,
+                              show.legend = NA,
+                              inherit.aes = TRUE, ...) {
+  ggplot2::layer(
+    stat = StatOlsintercept,
+    geom = ggplot2::GeomPoint,
+    data = data,
+    mapping = mapping,
+    position = position,
+    show.legend = show.legend,
+    inherit.aes = inherit.aes,
+    params = list(na.rm = na.rm, ...)
+  )
+}
+&lt;bytecode: 0x7f9dfd520a50&gt;
+&lt;environment: namespace:ggextend&gt;
+```
+]
+
+&lt;style&gt;
+.panel1-e_geom_lm_intercept_16-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-e_geom_lm_intercept_16-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-e_geom_lm_intercept_16-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+---
+
+count: false
+ 
+### e_geom_lm_intercept
+.panel1-e_geom_lm_intercept_17-auto[
+
+```r
+# using the function
+*ggplot(data = cars)
+```
+]
+ 
+.panel2-e_geom_lm_intercept_17-auto[
+![](exploded_examples_files/figure-html/e_geom_lm_intercept_17_auto_01_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### e_geom_lm_intercept
+.panel1-e_geom_lm_intercept_17-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+*aes(x = speed, y = dist)
+```
+]
+ 
+.panel2-e_geom_lm_intercept_17-auto[
+![](exploded_examples_files/figure-html/e_geom_lm_intercept_17_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### e_geom_lm_intercept
+.panel1-e_geom_lm_intercept_17-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+*geom_point()
+```
+]
+ 
+.panel2-e_geom_lm_intercept_17-auto[
+![](exploded_examples_files/figure-html/e_geom_lm_intercept_17_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### e_geom_lm_intercept
+.panel1-e_geom_lm_intercept_17-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ geom_point() +
+*geom_smooth(method = lm)
+```
+]
+ 
+.panel2-e_geom_lm_intercept_17-auto[
+![](exploded_examples_files/figure-html/e_geom_lm_intercept_17_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### e_geom_lm_intercept
+.panel1-e_geom_lm_intercept_17-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ geom_point() +
+ geom_smooth(method = lm) +
+*e_geom_lm_intercept(size = 4)
+```
+]
+ 
+.panel2-e_geom_lm_intercept_17-auto[
+![](exploded_examples_files/figure-html/e_geom_lm_intercept_17_auto_05_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### e_geom_lm_intercept
+.panel1-e_geom_lm_intercept_17-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ geom_point() +
+ geom_smooth(method = lm) +
+ e_geom_lm_intercept(size = 4) +
+*aes(color = speed &gt; 12)
+```
+]
+ 
+.panel2-e_geom_lm_intercept_17-auto[
+![](exploded_examples_files/figure-html/e_geom_lm_intercept_17_auto_06_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-e_geom_lm_intercept_17-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-e_geom_lm_intercept_17-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-e_geom_lm_intercept_17-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+---
+
+count: false
+ 
+### e_geom_lm_intercept
+.panel1-e_geom_lm_intercept_18-auto[
+
+```r
+# without the function
+*library(magrittr)
+```
+]
+ 
+.panel2-e_geom_lm_intercept_18-auto[
+
+]
+
+---
+count: false
+ 
+### e_geom_lm_intercept
+.panel1-e_geom_lm_intercept_18-auto[
+
+```r
+# without the function
+library(magrittr)
+*library(dplyr)
+```
+]
+ 
+.panel2-e_geom_lm_intercept_18-auto[
+
+]
+
+---
+count: false
+ 
+### e_geom_lm_intercept
+.panel1-e_geom_lm_intercept_18-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+*cars
+```
+]
+ 
+.panel2-e_geom_lm_intercept_18-auto[
+
+```
+   speed dist
+1      4    2
+2      4   10
+3      7    4
+4      7   22
+5      8   16
+6      9   10
+7     10   18
+8     10   26
+9     10   34
+10    11   17
+11    11   28
+12    12   14
+13    12   20
+14    12   24
+15    12   28
+16    13   26
+17    13   34
+18    13   34
+19    13   46
+20    14   26
+21    14   36
+22    14   60
+23    14   80
+24    15   20
+25    15   26
+26    15   54
+27    16   32
+28    16   40
+29    17   32
+30    17   40
+31    17   50
+32    18   42
+33    18   56
+34    18   76
+35    18   84
+36    19   36
+37    19   46
+38    19   68
+39    20   32
+40    20   48
+41    20   52
+42    20   56
+43    20   64
+44    22   66
+45    23   54
+46    24   70
+47    24   92
+48    24   93
+49    24  120
+50    25   85
+```
+]
+
+---
+count: false
+ 
+### e_geom_lm_intercept
+.panel1-e_geom_lm_intercept_18-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+*lm(dist ~ speed, data = .)
+```
+]
+ 
+.panel2-e_geom_lm_intercept_18-auto[
+
+```
+
+Call:
+lm(formula = dist ~ speed, data = .)
+
+Coefficients:
+(Intercept)        speed  
+    -17.579        3.932  
+```
+]
+
+---
+count: false
+ 
+### e_geom_lm_intercept
+.panel1-e_geom_lm_intercept_18-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+ lm(dist ~ speed, data = .) -&gt;
+*cars_model
+```
+]
+ 
+.panel2-e_geom_lm_intercept_18-auto[
+
+]
+
+---
+count: false
+ 
+### e_geom_lm_intercept
+.panel1-e_geom_lm_intercept_18-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+ lm(dist ~ speed, data = .) -&gt;
+ cars_model
+*tibble(y_val = cars_model$coefficients[1],
+*x_val = 0)
+```
+]
+ 
+.panel2-e_geom_lm_intercept_18-auto[
+
+```
+# A tibble: 1 x 2
+  y_val x_val
+  &lt;dbl&gt; &lt;dbl&gt;
+1 -17.6     0
+```
+]
+
+---
+count: false
+ 
+### e_geom_lm_intercept
+.panel1-e_geom_lm_intercept_18-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+ lm(dist ~ speed, data = .) -&gt;
+ cars_model
+ tibble(y_val = cars_model$coefficients[1],
+ x_val = 0) -&gt;
+*cars_model_intercept
+```
+]
+ 
+.panel2-e_geom_lm_intercept_18-auto[
+
+]
+
+---
+count: false
+ 
+### e_geom_lm_intercept
+.panel1-e_geom_lm_intercept_18-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+ lm(dist ~ speed, data = .) -&gt;
+ cars_model
+ tibble(y_val = cars_model$coefficients[1],
+ x_val = 0) -&gt;
+ cars_model_intercept
+*library(ggplot2)
+```
+]
+ 
+.panel2-e_geom_lm_intercept_18-auto[
+
+]
+
+---
+count: false
+ 
+### e_geom_lm_intercept
+.panel1-e_geom_lm_intercept_18-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+ lm(dist ~ speed, data = .) -&gt;
+ cars_model
+ tibble(y_val = cars_model$coefficients[1],
+ x_val = 0) -&gt;
+ cars_model_intercept
+library(ggplot2)
+*ggplot(data = cars)
+```
+]
+ 
+.panel2-e_geom_lm_intercept_18-auto[
+![](exploded_examples_files/figure-html/e_geom_lm_intercept_18_auto_09_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### e_geom_lm_intercept
+.panel1-e_geom_lm_intercept_18-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+ lm(dist ~ speed, data = .) -&gt;
+ cars_model
+ tibble(y_val = cars_model$coefficients[1],
+ x_val = 0) -&gt;
+ cars_model_intercept
+library(ggplot2)
+ggplot(data = cars) +
+*aes(x = speed, y = dist)
+```
+]
+ 
+.panel2-e_geom_lm_intercept_18-auto[
+![](exploded_examples_files/figure-html/e_geom_lm_intercept_18_auto_10_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### e_geom_lm_intercept
+.panel1-e_geom_lm_intercept_18-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+ lm(dist ~ speed, data = .) -&gt;
+ cars_model
+ tibble(y_val = cars_model$coefficients[1],
+ x_val = 0) -&gt;
+ cars_model_intercept
+library(ggplot2)
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+*geom_point()
+```
+]
+ 
+.panel2-e_geom_lm_intercept_18-auto[
+![](exploded_examples_files/figure-html/e_geom_lm_intercept_18_auto_11_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### e_geom_lm_intercept
+.panel1-e_geom_lm_intercept_18-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+ lm(dist ~ speed, data = .) -&gt;
+ cars_model
+ tibble(y_val = cars_model$coefficients[1],
+ x_val = 0) -&gt;
+ cars_model_intercept
+library(ggplot2)
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ geom_point() +
+*geom_smooth(method = lm)
+```
+]
+ 
+.panel2-e_geom_lm_intercept_18-auto[
+![](exploded_examples_files/figure-html/e_geom_lm_intercept_18_auto_12_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### e_geom_lm_intercept
+.panel1-e_geom_lm_intercept_18-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+ lm(dist ~ speed, data = .) -&gt;
+ cars_model
+ tibble(y_val = cars_model$coefficients[1],
+ x_val = 0) -&gt;
+ cars_model_intercept
+library(ggplot2)
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ geom_point() +
+ geom_smooth(method = lm) +
+*geom_point(data = cars_model_intercept,
+*    aes(x = x_val,
+*        y = y_val),
+*        color = "red",
+*        size = 3)
+```
+]
+ 
+.panel2-e_geom_lm_intercept_18-auto[
+![](exploded_examples_files/figure-html/e_geom_lm_intercept_18_auto_13_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-e_geom_lm_intercept_18-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-e_geom_lm_intercept_18-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-e_geom_lm_intercept_18-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+---
+
+count: false
+ 
+### f_geom_line_endpoint
+.panel1-f_geom_line_endpoint_19-auto[
+
+```r
+# the function
+*f_geom_line_endpoint
+```
+]
+ 
+.panel2-f_geom_line_endpoint_19-auto[
+
+```
+function(mapping = NULL,
+                              data = NULL,
+                              position = "identity",
+                              na.rm = FALSE,
+                              show.legend = NA,
+                              inherit.aes = TRUE, ...) {
+  ggplot2::layer(
+    stat = StatEndpoint,
+    geom = ggplot2::GeomPoint,
+    data = data,
+    mapping = mapping,
+    position = position,
+    show.legend = show.legend,
+    inherit.aes = inherit.aes,
+    params = list(na.rm = na.rm, ...)
+  )
+}
+&lt;bytecode: 0x7f9e01118358&gt;
+&lt;environment: namespace:ggextend&gt;
+```
+]
+
+&lt;style&gt;
+.panel1-f_geom_line_endpoint_19-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-f_geom_line_endpoint_19-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-f_geom_line_endpoint_19-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+---
+
+count: false
+ 
+### f_geom_line_endpoint
+.panel1-f_geom_line_endpoint_20-auto[
+
+```r
+# the proto
+*"StatEndpoint"
+```
+]
+ 
+.panel2-f_geom_line_endpoint_20-auto[
+
+```
+[1] "StatEndpoint"
+```
+]
+
+---
+count: false
+ 
+### f_geom_line_endpoint
+.panel1-f_geom_line_endpoint_20-auto[
+
+```r
+# the proto
+"StatEndpoint"
+*f_geom_line_endpoint
+```
+]
+ 
+.panel2-f_geom_line_endpoint_20-auto[
+
+```
+[1] "StatEndpoint"
+```
+
+```
+function(mapping = NULL,
+                              data = NULL,
+                              position = "identity",
+                              na.rm = FALSE,
+                              show.legend = NA,
+                              inherit.aes = TRUE, ...) {
+  ggplot2::layer(
+    stat = StatEndpoint,
+    geom = ggplot2::GeomPoint,
+    data = data,
+    mapping = mapping,
+    position = position,
+    show.legend = show.legend,
+    inherit.aes = inherit.aes,
+    params = list(na.rm = na.rm, ...)
+  )
+}
+&lt;bytecode: 0x7f9e01118358&gt;
+&lt;environment: namespace:ggextend&gt;
+```
+]
+
+&lt;style&gt;
+.panel1-f_geom_line_endpoint_20-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-f_geom_line_endpoint_20-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-f_geom_line_endpoint_20-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+---
+
+count: false
+ 
+### f_geom_line_endpoint
+.panel1-f_geom_line_endpoint_21-auto[
+
+```r
+# using the function
+*ggplot(data = cars)
+```
+]
+ 
+.panel2-f_geom_line_endpoint_21-auto[
+![](exploded_examples_files/figure-html/f_geom_line_endpoint_21_auto_01_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### f_geom_line_endpoint
+.panel1-f_geom_line_endpoint_21-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+*aes(x = speed, y = dist)
+```
+]
+ 
+.panel2-f_geom_line_endpoint_21-auto[
+![](exploded_examples_files/figure-html/f_geom_line_endpoint_21_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### f_geom_line_endpoint
+.panel1-f_geom_line_endpoint_21-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+*geom_line()
+```
+]
+ 
+.panel2-f_geom_line_endpoint_21-auto[
+![](exploded_examples_files/figure-html/f_geom_line_endpoint_21_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### f_geom_line_endpoint
+.panel1-f_geom_line_endpoint_21-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ geom_line() +
+*f_geom_line_endpoint(size = 4)
+```
+]
+ 
+.panel2-f_geom_line_endpoint_21-auto[
+![](exploded_examples_files/figure-html/f_geom_line_endpoint_21_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### f_geom_line_endpoint
+.panel1-f_geom_line_endpoint_21-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ geom_line() +
+ f_geom_line_endpoint(size = 4) +
+*aes(color = speed &gt; 9)
+```
+]
+ 
+.panel2-f_geom_line_endpoint_21-auto[
+![](exploded_examples_files/figure-html/f_geom_line_endpoint_21_auto_05_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### f_geom_line_endpoint
+.panel1-f_geom_line_endpoint_21-auto[
+
+```r
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ geom_line() +
+ f_geom_line_endpoint(size = 4) +
+ aes(color = speed &gt; 9)
+*layer_data(last_plot(), 2)
+```
+]
+ 
+.panel2-f_geom_line_endpoint_21-auto[
+![](exploded_examples_files/figure-html/f_geom_line_endpoint_21_auto_06_output-1.png)&lt;!-- --&gt;
+
+```
+   colour  x  y PANEL group shape size fill alpha stroke
+1 #F8766D  9 10     1     1    19    4   NA    NA    0.5
+2 #00BFC4 25 85     1     2    19    4   NA    NA    0.5
+```
+]
+
+&lt;style&gt;
+.panel1-f_geom_line_endpoint_21-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-f_geom_line_endpoint_21-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-f_geom_line_endpoint_21-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+---
+
+count: false
+ 
+### f_geom_line_endpoint
+.panel1-f_geom_line_endpoint_22-auto[
+
+```r
+# without the function
+*library(magrittr)
+```
+]
+ 
+.panel2-f_geom_line_endpoint_22-auto[
+
+]
+
+---
+count: false
+ 
+### f_geom_line_endpoint
+.panel1-f_geom_line_endpoint_22-auto[
+
+```r
+# without the function
+library(magrittr)
+*library(dplyr)
+```
+]
+ 
+.panel2-f_geom_line_endpoint_22-auto[
+
+]
+
+---
+count: false
+ 
+### f_geom_line_endpoint
+.panel1-f_geom_line_endpoint_22-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+*cars
+```
+]
+ 
+.panel2-f_geom_line_endpoint_22-auto[
+
+```
+   speed dist
+1      4    2
+2      4   10
+3      7    4
+4      7   22
+5      8   16
+6      9   10
+7     10   18
+8     10   26
+9     10   34
+10    11   17
+11    11   28
+12    12   14
+13    12   20
+14    12   24
+15    12   28
+16    13   26
+17    13   34
+18    13   34
+19    13   46
+20    14   26
+21    14   36
+22    14   60
+23    14   80
+24    15   20
+25    15   26
+26    15   54
+27    16   32
+28    16   40
+29    17   32
+30    17   40
+31    17   50
+32    18   42
+33    18   56
+34    18   76
+35    18   84
+36    19   36
+37    19   46
+38    19   68
+39    20   32
+40    20   48
+41    20   52
+42    20   56
+43    20   64
+44    22   66
+45    23   54
+46    24   70
+47    24   92
+48    24   93
+49    24  120
+50    25   85
+```
+]
+
+---
+count: false
+ 
+### f_geom_line_endpoint
+.panel1-f_geom_line_endpoint_22-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+* mutate(speed_cat = speed &gt; 8)
+```
+]
+ 
+.panel2-f_geom_line_endpoint_22-auto[
+
+```
+   speed dist speed_cat
+1      4    2     FALSE
+2      4   10     FALSE
+3      7    4     FALSE
+4      7   22     FALSE
+5      8   16     FALSE
+6      9   10      TRUE
+7     10   18      TRUE
+8     10   26      TRUE
+9     10   34      TRUE
+10    11   17      TRUE
+11    11   28      TRUE
+12    12   14      TRUE
+13    12   20      TRUE
+14    12   24      TRUE
+15    12   28      TRUE
+16    13   26      TRUE
+17    13   34      TRUE
+18    13   34      TRUE
+19    13   46      TRUE
+20    14   26      TRUE
+21    14   36      TRUE
+22    14   60      TRUE
+23    14   80      TRUE
+24    15   20      TRUE
+25    15   26      TRUE
+26    15   54      TRUE
+27    16   32      TRUE
+28    16   40      TRUE
+29    17   32      TRUE
+30    17   40      TRUE
+31    17   50      TRUE
+32    18   42      TRUE
+33    18   56      TRUE
+34    18   76      TRUE
+35    18   84      TRUE
+36    19   36      TRUE
+37    19   46      TRUE
+38    19   68      TRUE
+39    20   32      TRUE
+40    20   48      TRUE
+41    20   52      TRUE
+42    20   56      TRUE
+43    20   64      TRUE
+44    22   66      TRUE
+45    23   54      TRUE
+46    24   70      TRUE
+47    24   92      TRUE
+48    24   93      TRUE
+49    24  120      TRUE
+50    25   85      TRUE
+```
+]
+
+---
+count: false
+ 
+### f_geom_line_endpoint
+.panel1-f_geom_line_endpoint_22-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+  mutate(speed_cat = speed &gt; 8) %&gt;%
+* group_by(speed_cat)
+```
+]
+ 
+.panel2-f_geom_line_endpoint_22-auto[
+
+```
+# A tibble: 50 x 3
+# Groups:   speed_cat [2]
+   speed  dist speed_cat
+   &lt;dbl&gt; &lt;dbl&gt; &lt;lgl&gt;    
+ 1     4     2 FALSE    
+ 2     4    10 FALSE    
+ 3     7     4 FALSE    
+ 4     7    22 FALSE    
+ 5     8    16 FALSE    
+ 6     9    10 TRUE     
+ 7    10    18 TRUE     
+ 8    10    26 TRUE     
+ 9    10    34 TRUE     
+10    11    17 TRUE     
+# … with 40 more rows
+```
+]
+
+---
+count: false
+ 
+### f_geom_line_endpoint
+.panel1-f_geom_line_endpoint_22-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+  mutate(speed_cat = speed &gt; 8) %&gt;%
+  group_by(speed_cat) %&gt;%
+* filter(speed == max(speed))
+```
+]
+ 
+.panel2-f_geom_line_endpoint_22-auto[
+
+```
+# A tibble: 2 x 3
+# Groups:   speed_cat [2]
+  speed  dist speed_cat
+  &lt;dbl&gt; &lt;dbl&gt; &lt;lgl&gt;    
+1     8    16 FALSE    
+2    25    85 TRUE     
+```
+]
+
+---
+count: false
+ 
+### f_geom_line_endpoint
+.panel1-f_geom_line_endpoint_22-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+  mutate(speed_cat = speed &gt; 8) %&gt;%
+  group_by(speed_cat) %&gt;%
+  filter(speed == max(speed)) -&gt;
+*cars_group_endpoint
+```
+]
+ 
+.panel2-f_geom_line_endpoint_22-auto[
+
+]
+
+---
+count: false
+ 
+### f_geom_line_endpoint
+.panel1-f_geom_line_endpoint_22-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+  mutate(speed_cat = speed &gt; 8) %&gt;%
+  group_by(speed_cat) %&gt;%
+  filter(speed == max(speed)) -&gt;
+ cars_group_endpoint
+*library(ggplot2)
+```
+]
+ 
+.panel2-f_geom_line_endpoint_22-auto[
+
+]
+
+---
+count: false
+ 
+### f_geom_line_endpoint
+.panel1-f_geom_line_endpoint_22-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+  mutate(speed_cat = speed &gt; 8) %&gt;%
+  group_by(speed_cat) %&gt;%
+  filter(speed == max(speed)) -&gt;
+ cars_group_endpoint
+library(ggplot2)
+*ggplot(data = cars)
+```
+]
+ 
+.panel2-f_geom_line_endpoint_22-auto[
+![](exploded_examples_files/figure-html/f_geom_line_endpoint_22_auto_09_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### f_geom_line_endpoint
+.panel1-f_geom_line_endpoint_22-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+  mutate(speed_cat = speed &gt; 8) %&gt;%
+  group_by(speed_cat) %&gt;%
+  filter(speed == max(speed)) -&gt;
+ cars_group_endpoint
+library(ggplot2)
+ggplot(data = cars) +
+*aes(x = speed, y = dist)
+```
+]
+ 
+.panel2-f_geom_line_endpoint_22-auto[
+![](exploded_examples_files/figure-html/f_geom_line_endpoint_22_auto_10_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### f_geom_line_endpoint
+.panel1-f_geom_line_endpoint_22-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+  mutate(speed_cat = speed &gt; 8) %&gt;%
+  group_by(speed_cat) %&gt;%
+  filter(speed == max(speed)) -&gt;
+ cars_group_endpoint
+library(ggplot2)
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+*aes(color = speed &gt; 8)
+```
+]
+ 
+.panel2-f_geom_line_endpoint_22-auto[
+![](exploded_examples_files/figure-html/f_geom_line_endpoint_22_auto_11_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### f_geom_line_endpoint
+.panel1-f_geom_line_endpoint_22-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+  mutate(speed_cat = speed &gt; 8) %&gt;%
+  group_by(speed_cat) %&gt;%
+  filter(speed == max(speed)) -&gt;
+ cars_group_endpoint
+library(ggplot2)
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ aes(color = speed &gt; 8) +
+*geom_line()
+```
+]
+ 
+.panel2-f_geom_line_endpoint_22-auto[
+![](exploded_examples_files/figure-html/f_geom_line_endpoint_22_auto_12_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### f_geom_line_endpoint
+.panel1-f_geom_line_endpoint_22-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+  mutate(speed_cat = speed &gt; 8) %&gt;%
+  group_by(speed_cat) %&gt;%
+  filter(speed == max(speed)) -&gt;
+ cars_group_endpoint
+library(ggplot2)
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ aes(color = speed &gt; 8) +
+ geom_line() +
+*geom_point(data = cars_group_endpoint)
+```
+]
+ 
+.panel2-f_geom_line_endpoint_22-auto[
+![](exploded_examples_files/figure-html/f_geom_line_endpoint_22_auto_13_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### f_geom_line_endpoint
+.panel1-f_geom_line_endpoint_22-auto[
+
+```r
+# without the function
+library(magrittr)
+library(dplyr)
+cars %&gt;%
+  mutate(speed_cat = speed &gt; 8) %&gt;%
+  group_by(speed_cat) %&gt;%
+  filter(speed == max(speed)) -&gt;
+ cars_group_endpoint
+library(ggplot2)
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ aes(color = speed &gt; 8) +
+ geom_line() +
+ geom_point(data = cars_group_endpoint)
+*layer_data(last_plot(), 2)
+```
+]
+ 
+.panel2-f_geom_line_endpoint_22-auto[
+![](exploded_examples_files/figure-html/f_geom_line_endpoint_22_auto_14_output-1.png)&lt;!-- --&gt;
+
+```
+   colour  x  y PANEL group shape size fill alpha stroke
+1 #F8766D  8 16     1     1    19  1.5   NA    NA    0.5
+2 #00BFC4 25 85     1     2    19  1.5   NA    NA    0.5
+```
+]
+
+&lt;style&gt;
+.panel1-f_geom_line_endpoint_22-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-f_geom_line_endpoint_22-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-f_geom_line_endpoint_22-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+---
+
+count: false
+ 
+### g_geom_line_label
+.panel1-g_geom_line_label_23-auto[
+
+```r
+# the proto and function
+*"StatLineendlabel"
+```
+]
+ 
+.panel2-g_geom_line_label_23-auto[
+
+```
+[1] "StatLineendlabel"
+```
+]
+
+---
+count: false
+ 
+### g_geom_line_label
+.panel1-g_geom_line_label_23-auto[
+
+```r
+# the proto and function
+"StatLineendlabel"
+*g_geom_line_label
+```
+]
+ 
+.panel2-g_geom_line_label_23-auto[
+
+```
+[1] "StatLineendlabel"
+```
+
+```
+function(mapping = NULL,
+                              data = NULL,
+                              position = "identity",
+                              na.rm = FALSE,
+                              show.legend = NA,
+                              inherit.aes = TRUE,
+                              ...) {
+  ggplot2::layer(
+    stat = StatLineendlabel,
+    geom = ggplot2::GeomText,
+    data = data,
+    mapping = mapping,
+    position = position,
+    show.legend = show.legend,
+    inherit.aes = inherit.aes,
+    params = list(na.rm = na.rm, ...)
+  )
+}
+&lt;bytecode: 0x7f9df857d3d0&gt;
+&lt;environment: namespace:ggextend&gt;
+```
+]
+
+&lt;style&gt;
+.panel1-g_geom_line_label_23-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-g_geom_line_label_23-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-g_geom_line_label_23-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+
+
+
+---
+
+count: false
+ 
+### h_geom_prop_in_ts
+.panel1-h_geom_prop_in_ts_26-auto[
+
+```r
+# do it without function
+*library(tidyverse)
+```
+]
+ 
+.panel2-h_geom_prop_in_ts_26-auto[
+
+]
+
+---
+count: false
+ 
+### h_geom_prop_in_ts
+.panel1-h_geom_prop_in_ts_26-auto[
+
+```r
+# do it without function
+library(tidyverse)
+*gapminder::gapminder
+```
+]
+ 
+.panel2-h_geom_prop_in_ts_26-auto[
+
+```
+# A tibble: 1,704 x 6
+   country     continent  year lifeExp      pop gdpPercap
+   &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+ 1 Afghanistan Asia       1952    28.8  8425333      779.
+ 2 Afghanistan Asia       1957    30.3  9240934      821.
+ 3 Afghanistan Asia       1962    32.0 10267083      853.
+ 4 Afghanistan Asia       1967    34.0 11537966      836.
+ 5 Afghanistan Asia       1972    36.1 13079460      740.
+ 6 Afghanistan Asia       1977    38.4 14880372      786.
+ 7 Afghanistan Asia       1982    39.9 12881816      978.
+ 8 Afghanistan Asia       1987    40.8 13867957      852.
+ 9 Afghanistan Asia       1992    41.7 16317921      649.
+10 Afghanistan Asia       1997    41.8 22227415      635.
+# … with 1,694 more rows
+```
+]
+
+---
+count: false
+ 
+### h_geom_prop_in_ts
+.panel1-h_geom_prop_in_ts_26-auto[
+
+```r
+# do it without function
+library(tidyverse)
+gapminder::gapminder %&gt;%
+* mutate(gdp = gdpPercap * pop)
+```
+]
+ 
+.panel2-h_geom_prop_in_ts_26-auto[
+
+```
+# A tibble: 1,704 x 7
+   country     continent  year lifeExp      pop gdpPercap          gdp
+   &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;        &lt;dbl&gt;
+ 1 Afghanistan Asia       1952    28.8  8425333      779.  6567086330.
+ 2 Afghanistan Asia       1957    30.3  9240934      821.  7585448670.
+ 3 Afghanistan Asia       1962    32.0 10267083      853.  8758855797.
+ 4 Afghanistan Asia       1967    34.0 11537966      836.  9648014150.
+ 5 Afghanistan Asia       1972    36.1 13079460      740.  9678553274.
+ 6 Afghanistan Asia       1977    38.4 14880372      786. 11697659231.
+ 7 Afghanistan Asia       1982    39.9 12881816      978. 12598563401.
+ 8 Afghanistan Asia       1987    40.8 13867957      852. 11820990309.
+ 9 Afghanistan Asia       1992    41.7 16317921      649. 10595901589.
+10 Afghanistan Asia       1997    41.8 22227415      635. 14121995875.
+# … with 1,694 more rows
+```
+]
+
+---
+count: false
+ 
+### h_geom_prop_in_ts
+.panel1-h_geom_prop_in_ts_26-auto[
+
+```r
+# do it without function
+library(tidyverse)
+gapminder::gapminder %&gt;%
+  mutate(gdp = gdpPercap * pop) -&gt;
+*my_gapminder
+```
+]
+ 
+.panel2-h_geom_prop_in_ts_26-auto[
+
+]
+
+---
+count: false
+ 
+### h_geom_prop_in_ts
+.panel1-h_geom_prop_in_ts_26-auto[
+
+```r
+# do it without function
+library(tidyverse)
+gapminder::gapminder %&gt;%
+  mutate(gdp = gdpPercap * pop) -&gt;
+my_gapminder
+*my_gapminder
+```
+]
+ 
+.panel2-h_geom_prop_in_ts_26-auto[
+
+```
+# A tibble: 1,704 x 7
+   country     continent  year lifeExp      pop gdpPercap          gdp
+   &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;        &lt;dbl&gt;
+ 1 Afghanistan Asia       1952    28.8  8425333      779.  6567086330.
+ 2 Afghanistan Asia       1957    30.3  9240934      821.  7585448670.
+ 3 Afghanistan Asia       1962    32.0 10267083      853.  8758855797.
+ 4 Afghanistan Asia       1967    34.0 11537966      836.  9648014150.
+ 5 Afghanistan Asia       1972    36.1 13079460      740.  9678553274.
+ 6 Afghanistan Asia       1977    38.4 14880372      786. 11697659231.
+ 7 Afghanistan Asia       1982    39.9 12881816      978. 12598563401.
+ 8 Afghanistan Asia       1987    40.8 13867957      852. 11820990309.
+ 9 Afghanistan Asia       1992    41.7 16317921      649. 10595901589.
+10 Afghanistan Asia       1997    41.8 22227415      635. 14121995875.
+# … with 1,694 more rows
+```
+]
+
+---
+count: false
+ 
+### h_geom_prop_in_ts
+.panel1-h_geom_prop_in_ts_26-auto[
+
+```r
+# do it without function
+library(tidyverse)
+gapminder::gapminder %&gt;%
+  mutate(gdp = gdpPercap * pop) -&gt;
+my_gapminder
+my_gapminder %&gt;%
+* group_by(year, continent)
+```
+]
+ 
+.panel2-h_geom_prop_in_ts_26-auto[
+
+```
+# A tibble: 1,704 x 7
+# Groups:   year, continent [60]
+   country     continent  year lifeExp      pop gdpPercap          gdp
+   &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;        &lt;dbl&gt;
+ 1 Afghanistan Asia       1952    28.8  8425333      779.  6567086330.
+ 2 Afghanistan Asia       1957    30.3  9240934      821.  7585448670.
+ 3 Afghanistan Asia       1962    32.0 10267083      853.  8758855797.
+ 4 Afghanistan Asia       1967    34.0 11537966      836.  9648014150.
+ 5 Afghanistan Asia       1972    36.1 13079460      740.  9678553274.
+ 6 Afghanistan Asia       1977    38.4 14880372      786. 11697659231.
+ 7 Afghanistan Asia       1982    39.9 12881816      978. 12598563401.
+ 8 Afghanistan Asia       1987    40.8 13867957      852. 11820990309.
+ 9 Afghanistan Asia       1992    41.7 16317921      649. 10595901589.
+10 Afghanistan Asia       1997    41.8 22227415      635. 14121995875.
+# … with 1,694 more rows
+```
+]
+
+---
+count: false
+ 
+### h_geom_prop_in_ts
+.panel1-h_geom_prop_in_ts_26-auto[
+
+```r
+# do it without function
+library(tidyverse)
+gapminder::gapminder %&gt;%
+  mutate(gdp = gdpPercap * pop) -&gt;
+my_gapminder
+my_gapminder %&gt;%
+  group_by(year, continent) %&gt;%
+* summarise(gdp = sum(gdp))
+```
+]
+ 
+.panel2-h_geom_prop_in_ts_26-auto[
+
+```
+# A tibble: 60 x 3
+# Groups:   year [12]
+    year continent     gdp
+   &lt;int&gt; &lt;fct&gt;       &lt;dbl&gt;
+ 1  1952 Africa    3.12e11
+ 2  1952 Americas  2.94e12
+ 3  1952 Asia      1.13e12
+ 4  1952 Europe    2.55e12
+ 5  1952 Oceania   1.08e11
+ 6  1957 Africa    3.83e11
+ 7  1957 Americas  3.52e12
+ 8  1957 Asia      1.56e12
+ 9  1957 Europe    3.30e12
+10  1957 Oceania   1.34e11
+# … with 50 more rows
+```
+]
+
+---
+count: false
+ 
+### h_geom_prop_in_ts
+.panel1-h_geom_prop_in_ts_26-auto[
+
+```r
+# do it without function
+library(tidyverse)
+gapminder::gapminder %&gt;%
+  mutate(gdp = gdpPercap * pop) -&gt;
+my_gapminder
+my_gapminder %&gt;%
+  group_by(year, continent) %&gt;%
+  summarise(gdp = sum(gdp)) %&gt;%
+* mutate(prop_gdp = gdp/sum(gdp))
+```
+]
+ 
+.panel2-h_geom_prop_in_ts_26-auto[
+
+```
+# A tibble: 60 x 4
+# Groups:   year [12]
+    year continent     gdp prop_gdp
+   &lt;int&gt; &lt;fct&gt;       &lt;dbl&gt;    &lt;dbl&gt;
+ 1  1952 Africa    3.12e11   0.0443
+ 2  1952 Americas  2.94e12   0.418 
+ 3  1952 Asia      1.13e12   0.160 
+ 4  1952 Europe    2.55e12   0.362 
+ 5  1952 Oceania   1.08e11   0.0154
+ 6  1957 Africa    3.83e11   0.0430
+ 7  1957 Americas  3.52e12   0.396 
+ 8  1957 Asia      1.56e12   0.175 
+ 9  1957 Europe    3.30e12   0.371 
+10  1957 Oceania   1.34e11   0.0150
+# … with 50 more rows
+```
+]
+
+---
+count: false
+ 
+### h_geom_prop_in_ts
+.panel1-h_geom_prop_in_ts_26-auto[
+
+```r
+# do it without function
+library(tidyverse)
+gapminder::gapminder %&gt;%
+  mutate(gdp = gdpPercap * pop) -&gt;
+my_gapminder
+my_gapminder %&gt;%
+  group_by(year, continent) %&gt;%
+  summarise(gdp = sum(gdp)) %&gt;%
+  mutate(prop_gdp = gdp/sum(gdp)) %&gt;%
+* ggplot()
+```
+]
+ 
+.panel2-h_geom_prop_in_ts_26-auto[
+![](exploded_examples_files/figure-html/h_geom_prop_in_ts_26_auto_09_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### h_geom_prop_in_ts
+.panel1-h_geom_prop_in_ts_26-auto[
+
+```r
+# do it without function
+library(tidyverse)
+gapminder::gapminder %&gt;%
+  mutate(gdp = gdpPercap * pop) -&gt;
+my_gapminder
+my_gapminder %&gt;%
+  group_by(year, continent) %&gt;%
+  summarise(gdp = sum(gdp)) %&gt;%
+  mutate(prop_gdp = gdp/sum(gdp)) %&gt;%
+  ggplot() +
+* aes(x = year)
+```
+]
+ 
+.panel2-h_geom_prop_in_ts_26-auto[
+![](exploded_examples_files/figure-html/h_geom_prop_in_ts_26_auto_10_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### h_geom_prop_in_ts
+.panel1-h_geom_prop_in_ts_26-auto[
+
+```r
+# do it without function
+library(tidyverse)
+gapminder::gapminder %&gt;%
+  mutate(gdp = gdpPercap * pop) -&gt;
+my_gapminder
+my_gapminder %&gt;%
+  group_by(year, continent) %&gt;%
+  summarise(gdp = sum(gdp)) %&gt;%
+  mutate(prop_gdp = gdp/sum(gdp)) %&gt;%
+  ggplot() +
+  aes(x = year) +
+* aes(y = continent)
+```
+]
+ 
+.panel2-h_geom_prop_in_ts_26-auto[
+![](exploded_examples_files/figure-html/h_geom_prop_in_ts_26_auto_11_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### h_geom_prop_in_ts
+.panel1-h_geom_prop_in_ts_26-auto[
+
+```r
+# do it without function
+library(tidyverse)
+gapminder::gapminder %&gt;%
+  mutate(gdp = gdpPercap * pop) -&gt;
+my_gapminder
+my_gapminder %&gt;%
+  group_by(year, continent) %&gt;%
+  summarise(gdp = sum(gdp)) %&gt;%
+  mutate(prop_gdp = gdp/sum(gdp)) %&gt;%
+  ggplot() +
+  aes(x = year) +
+  aes(y = continent) +
+* geom_tile()
+```
+]
+ 
+.panel2-h_geom_prop_in_ts_26-auto[
+![](exploded_examples_files/figure-html/h_geom_prop_in_ts_26_auto_12_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### h_geom_prop_in_ts
+.panel1-h_geom_prop_in_ts_26-auto[
+
+```r
+# do it without function
+library(tidyverse)
+gapminder::gapminder %&gt;%
+  mutate(gdp = gdpPercap * pop) -&gt;
+my_gapminder
+my_gapminder %&gt;%
+  group_by(year, continent) %&gt;%
+  summarise(gdp = sum(gdp)) %&gt;%
+  mutate(prop_gdp = gdp/sum(gdp)) %&gt;%
+  ggplot() +
+  aes(x = year) +
+  aes(y = continent) +
+  geom_tile() +
+* aes(fill = prop_gdp)
+```
+]
+ 
+.panel2-h_geom_prop_in_ts_26-auto[
+![](exploded_examples_files/figure-html/h_geom_prop_in_ts_26_auto_13_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+### h_geom_prop_in_ts
+.panel1-h_geom_prop_in_ts_26-auto[
+
+```r
+# do it without function
+library(tidyverse)
+gapminder::gapminder %&gt;%
+  mutate(gdp = gdpPercap * pop) -&gt;
+my_gapminder
+my_gapminder %&gt;%
+  group_by(year, continent) %&gt;%
+  summarise(gdp = sum(gdp)) %&gt;%
+  mutate(prop_gdp = gdp/sum(gdp)) %&gt;%
+  ggplot() +
+  aes(x = year) +
+  aes(y = continent) +
+  geom_tile() +
+  aes(fill = prop_gdp) +
+* scale_fill_viridis_c()
+```
+]
+ 
+.panel2-h_geom_prop_in_ts_26-auto[
+![](exploded_examples_files/figure-html/h_geom_prop_in_ts_26_auto_14_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-h_geom_prop_in_ts_26-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-h_geom_prop_in_ts_26-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-h_geom_prop_in_ts_26-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

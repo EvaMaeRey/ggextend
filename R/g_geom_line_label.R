@@ -35,8 +35,7 @@
 
 
 #' # the proto and function
-#' StatLineendlabel$compute_group
-#' StatLineendlabel$required_aes
+#' StatLineendlabel
 #' g_geom_line_label
 #'
 #'

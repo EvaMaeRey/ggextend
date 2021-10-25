@@ -38,6 +38,7 @@
 #'  q_geom_point_sample(color = "red", seed = my_seed) +
 #'  r_geom_lm_sample(color = "red", seed = my_seed)
 #'
+#'
 r_geom_lm_sample <- function(mapping = NULL,
                                 data = NULL,
                                 position = "identity",
@@ -46,6 +47,10 @@ r_geom_lm_sample <- function(mapping = NULL,
                                 inherit.aes = TRUE,
                                 # sample_size = 10,
                                 ...) {
+
+
+  message("sample size is 10 by default")
+
   ggplot2::layer(
     stat = StatSamplelm,
     geom = ggplot2::GeomLine,
@@ -56,6 +61,7 @@ r_geom_lm_sample <- function(mapping = NULL,
     inherit.aes = inherit.aes,
     params = list(na.rm = na.rm, ...)
   )
+
 }
 
 StatSamplelm <- ggplot2::ggproto(

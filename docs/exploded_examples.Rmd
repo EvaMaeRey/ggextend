@@ -1,0 +1,556 @@
+---
+title: ggextend
+subtitle: ""
+author: "Exploded Examples"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: [default, hygge, ninjutsu]
+    nature:
+      ratio: 16:9
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, echo = F}
+knitr::opts_chunk$set(echo = TRUE, message = F, warning = F, fig.height = 6, comment = "", cache = T)
+options(knitr.duplicate.label = "allow")
+library(ggextend)
+```
+
+
+---
+
+`r flipbookr::chunk_reveal('a_geom_punto_1', title = '### a_geom_punto')`
+
+```{r a_geom_punto_1, include = F}
+# without the function
+library(ggplot2)
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ geom_point()
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('a_geom_punto_2', title = '### a_geom_punto')`
+
+```{r a_geom_punto_2, include = F}
+# the function
+a_geom_punto
+a_geom_punto
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('a_geom_punto_3', title = '### a_geom_punto')`
+
+```{r a_geom_punto_3, include = F}
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ a_geom_punto()
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('b_geom_point_blue_4', title = '### b_geom_point_blue')`
+
+```{r b_geom_point_blue_4, include = F}
+# without the function
+library(ggplot2)
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ geom_point(color = "blue")
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('b_geom_point_blue_5', title = '### b_geom_point_blue')`
+
+```{r b_geom_point_blue_5, include = F}
+# the function
+b_geom_point_blue
+b_geom_point_blue
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('b_geom_point_blue_6', title = '### b_geom_point_blue')`
+
+```{r b_geom_point_blue_6, include = F}
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ b_geom_point_blue()
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('b_geom_ring_7', title = '### b_geom_ring')`
+
+```{r b_geom_ring_7, include = F}
+# without the function
+library(ggplot2)
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ geom_point(shape = 21,
+            size = 3)
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('b_geom_ring_8', title = '### b_geom_ring')`
+
+```{r b_geom_ring_8, include = F}
+# the function
+b_geom_ring
+b_geom_ring
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('b_geom_ring_9', title = '### b_geom_ring')`
+
+```{r b_geom_ring_9, include = F}
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ b_geom_ring(size = 3) +
+ b_geom_ring(aes(fill = speed > 9),
+             color = "white",
+             size = 8)
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ b_geom_ring(fill = "slateblue",
+             color = "white",
+             size = 8)
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('c_geom_lm_10', title = '### c_geom_lm')`
+
+```{r c_geom_lm_10, include = F}
+# without the function
+library(ggplot2)
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ geom_point() +
+ geom_smooth(method = lm, se = FALSE)
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('c_geom_lm_11', title = '### c_geom_lm')`
+
+```{r c_geom_lm_11, include = F}
+# the function
+c_geom_lm
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('c_geom_lm_12', title = '### c_geom_lm')`
+
+```{r c_geom_lm_12, include = F}
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ geom_point() +
+ c_geom_lm()
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('d_geom_segment_min_max_13', title = '### d_geom_segment_min_max')`
+
+```{r d_geom_segment_min_max_13, include = F}
+# without the function
+library(magrittr)
+library(dplyr)
+cars %>%
+ summarize(
+   min_speed = min(speed),
+   max_speed = max(speed),
+   min_dist = min(dist),
+   max_dist = max(dist)
+ ) ->
+ mins_maxs
+library(ggplot2)
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ geom_point() +
+ geom_segment(data = mins_maxs,
+     aes(x = min_speed, xend = max_speed,
+         y = min_dist, yend = max_dist))
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('d_geom_segment_min_max_14', title = '### d_geom_segment_min_max')`
+
+```{r d_geom_segment_min_max_14, include = F}
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ geom_point() +
+ d_geom_segment_mins_maxs()
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('d_geom_segment_min_max_15', title = '### d_geom_segment_min_max')`
+
+```{r d_geom_segment_min_max_15, include = F}
+# the proto
+"StatSegmentminmax"
+d_geom_segment_mins_maxs
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('e_geom_lm_intercept_16', title = '### e_geom_lm_intercept')`
+
+```{r e_geom_lm_intercept_16, include = F}
+# without the function
+library(magrittr)
+library(dplyr)
+cars %>%
+ lm(dist ~ speed, data = .) ->
+ cars_model
+ tibble(y_val = cars_model$coefficients[1],
+ x_val = 0) ->
+ cars_model_intercept
+library(ggplot2)
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ geom_point() +
+ geom_smooth(method = lm) +
+ geom_point(data = cars_model_intercept,
+     aes(x = x_val,
+         y = y_val),
+         color = "red",
+         size = 3)
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('e_geom_lm_intercept_17', title = '### e_geom_lm_intercept')`
+
+```{r e_geom_lm_intercept_17, include = F}
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ geom_point() +
+ geom_smooth(method = lm) +
+ e_geom_lm_intercept(size = 4) +
+ aes(color = speed > 12)
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('e_geom_lm_intercept_18', title = '### e_geom_lm_intercept')`
+
+```{r e_geom_lm_intercept_18, include = F}
+# the proto and function
+"StatOlsintercept"
+e_geom_lm_intercept
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('f_geom_line_endpoint_19', title = '### f_geom_line_endpoint')`
+
+```{r f_geom_line_endpoint_19, include = F}
+# without the function
+library(magrittr)
+library(dplyr)
+cars %>%
+  mutate(speed_cat = speed > 8) %>%
+  group_by(speed_cat) %>%
+  filter(speed == max(speed)) ->
+ cars_group_endpoint
+library(ggplot2)
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ aes(color = speed > 8) +
+ geom_line() +
+ geom_point(data = cars_group_endpoint)
+layer_data(last_plot(), 2)
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('f_geom_line_endpoint_20', title = '### f_geom_line_endpoint')`
+
+```{r f_geom_line_endpoint_20, include = F}
+# the function
+f_geom_line_endpoint
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('f_geom_line_endpoint_21', title = '### f_geom_line_endpoint')`
+
+```{r f_geom_line_endpoint_21, include = F}
+# using the function
+ggplot(data = cars) +
+ aes(x = speed, y = dist) +
+ geom_line() +
+ f_geom_line_endpoint(size = 4) +
+ aes(color = speed > 9)
+ layer_data(last_plot(), 2)
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('f_geom_line_endpoint_22', title = '### f_geom_line_endpoint')`
+
+```{r f_geom_line_endpoint_22, include = F}
+# the proto
+"StatEndpoint"
+f_geom_line_endpoint
+```
+
+
+
+
+
+
+
+
+---
+
+`r flipbookr::chunk_reveal('h_geom_prop_in_ts_26', title = '### h_geom_prop_in_ts')`
+
+```{r h_geom_prop_in_ts_26, include = F}
+# do it without function
+library(tidyverse)
+gapminder::gapminder %>%
+  mutate(gdp = gdpPercap * pop) ->
+my_gapminder
+my_gapminder %>%
+  group_by(year, continent) %>%
+  summarise(gdp = sum(gdp)) %>%
+  mutate(prop_gdp = gdp/sum(gdp)) %>%
+  ggplot() +
+  aes(x = year) +
+  aes(y = continent) +
+  geom_tile() +
+  aes(fill = prop_gdp) +
+  scale_fill_viridis_c()
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('h_geom_prop_in_ts_27', title = '### h_geom_prop_in_ts')`
+
+```{r h_geom_prop_in_ts_27, include = F}
+# the function and proto
+"StatPropovertime"
+"StatPropovertimetext"
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('h_geom_prop_in_ts_28', title = '### h_geom_prop_in_ts')`
+
+```{r h_geom_prop_in_ts_28, include = F}
+# use function
+library(ggplot2)
+library(magrittr)
+my_gapminder %>%
+ggplot() +
+  aes(x = year) +
+  aes(y = continent) +
+  geom_tile_prop_over_time() +
+  aes(fill = gdp) +
+  scale_fill_viridis_c()
+
+
+library(ggplot2)
+library(magrittr)
+gapminder::gapminder %>%
+dplyr::mutate(gdp = gdpPercap * pop) %>%
+ggplot() +
+  aes(x = year) +
+  aes(y = continent) +
+  geom_tile_prop_over_time() +
+  aes(fill = gdp) +
+  scale_fill_viridis_c() +
+  aes(label = gdp) +
+  geom_tile_prop_over_time_text()
+gapminder::gapminder %>%
+dplyr::mutate(gdp = gdpPercap * pop) %>%
+ggplot() +
+  aes(x = year) +
+  aes(y = continent) +
+  geom_tile_prop_over_time() +
+  aes(fill = gdp) +
+  scale_fill_viridis_c() +
+  aes(label = gdp) +
+  geom_tile_prop_over_time_text() +
+  facet_wrap(facets = vars(pop > 1000000))
+gapminder::gapminder %>%
+ggplot() +
+  aes(x = year) +
+  aes(y = continent) +
+  aes(fill = 1, label = 1) + # use 1 to count times continent is observed
+  geom_tile_prop_over_time(color = "oldlace") +
+  labs(fill = "proportionnof countriesnin each timenperiod") +
+  geom_tile_prop_over_time_text(size = 3) +
+  facet_wrap(facets = vars(ifelse(gdpPercap > 10000,
+  "gdp per cap > 10000", "gdp per cap < 10000")),
+  ncol = 1) +
+  scale_fill_viridis_c()
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('i_geom_prop_label_in_ts_29', title = '### i_geom_prop_label_in_ts')`
+
+```{r i_geom_prop_label_in_ts_29, include = F}
+library(ggplot2)
+library(magrittr)
+gapminder::gapminder %>%
+dplyr::mutate(gdp = gdpPercap * pop) %>%
+ggplot() +
+  aes(x = year) +
+  aes(y = continent) +
+  geom_tile_prop_over_time() +
+  aes(fill = gdp) +
+  scale_fill_viridis_c() +
+  aes(label = gdp) +
+  geom_tile_prop_over_time_text()
+gapminder::gapminder %>%
+dplyr::mutate(gdp = gdpPercap * pop) %>%
+ggplot() +
+  aes(x = year) +
+  aes(y = continent) +
+  geom_tile_prop_over_time() +
+  aes(fill = gdp) +
+  scale_fill_viridis_c() +
+  aes(label = gdp) +
+  geom_tile_prop_over_time_text(size = 2, angle = -90,
+                                color = "snow") +
+  facet_wrap(facets = vars(pop > 1000000))
+gapminder::gapminder %>%
+ggplot() +
+  aes(x = year) +
+  aes(y = continent) +
+  aes(fill = 1, label = 1) + # use 1 to count times continent is observed
+  geom_tile_prop_over_time(color = "oldlace") +
+  labs(fill = "proportionnof countriesnin each timenperiod") +
+  geom_tile_prop_over_time_text(size = 3) +
+  facet_wrap(facets = vars(ifelse(gdpPercap > 10000,
+  "gdp per cap > 10000", "gdp per cap < 10000")),
+  ncol = 1) +
+  scale_fill_viridis_c()
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('j_geom_c_hull_30', title = '### j_geom_c_hull')`
+
+```{r j_geom_c_hull_30, include = F}
+library(ggplot2)
+library(magrittr)
+chull(cars$speed, cars$dist) %>% # index of rim points
+cars[.,] ->
+cars_c_hull_rows
+ggplot(data = cars) +
+  aes(x = speed) +
+  aes(y = dist) +
+  geom_point() +
+  geom_polygon(data = cars_c_hull_rows,
+  alpha = .5
+  )
+ggplot(data = cars) +
+  aes(x = speed) +
+  aes(y = dist) +
+  geom_point() +
+  geom_c_hull(alpha = .5) +
+  aes(color = speed >= 10)
+```
+
+
+
+---
+
+`r flipbookr::chunk_reveal('k_geom_c_hull_hollow_31', title = '### k_geom_c_hull_hollow')`
+
+```{r k_geom_c_hull_hollow_31, include = F}
+library(ggplot2)
+library(magrittr)
+chull(cars$speed, cars$dist) %>% # index of rim points
+cars[.,] ->
+cars_c_hull_rows
+ggplot(data = cars) +
+  aes(x = speed) +
+  aes(y = dist) +
+  geom_point() +
+  geom_polygon(data = cars_c_hull_rows,
+  alpha = .5
+  )
+ggplot(data = cars) +
+  aes(x = speed) +
+  aes(y = dist) +
+  geom_point() +
+  k_geom_c_hull_hollow(alpha = .5) +
+  aes(color = speed >= 10)
+```
+
+
